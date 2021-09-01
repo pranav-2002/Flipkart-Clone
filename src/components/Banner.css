@@ -1,0 +1,11 @@
+.banner {
+  padding: 8px;
+  cursor: pointer;
+  height: auto;
+}
+
+.banner img {
+  width: 100%;
+  min-width: auto;
+  object-fit: contain;
+}

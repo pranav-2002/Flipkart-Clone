@@ -1,0 +1,41 @@
+.productsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.productsCard img {
+  width: 115px;
+  height: 160px;
+  margin: 2rem 3rem 0 2rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.productsCard__title {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-top: 1rem;
+}
+
+.productsCard__discount {
+  font-family: Roboto, Arial, sans-serif;
+  color: #388e3c;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.productsCard__category {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.86rem;
+  margin-top: 0.6rem;
+  color: grey;
+}
+
+.productsCard img:hover {
+  transform: scale(1.03);
+}

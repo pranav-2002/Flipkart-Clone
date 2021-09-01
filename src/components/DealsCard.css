@@ -1,0 +1,61 @@
+.dealsCard {
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  justify-content: center;
+}
+
+.dealsCard img {
+  object-fit: contain;
+  max-width: 30%;
+  min-width: 30%;
+  width: 30%;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all ease-in-out 0.2s;
+}
+
+.dealsCard h4 {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.dealsCard p {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 1.2rem;
+}
+
+.dealsCard button {
+  background-color: #ffa41c;
+  color: black;
+  width: 50%;
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #ffa41c;
+  border-radius: 10px;
+}
+
+.dealsCard button:active {
+  background-color: #ff8f00;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.dealsCard img:hover {
+  transform: scale(1.08);
+}

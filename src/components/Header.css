@@ -1,0 +1,147 @@
+.header {
+  display: flex;
+  background-color: #2874f0;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  font-family: Roboto, Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.header img {
+  width: 6%;
+  object-fit: contain;
+  height: auto;
+  cursor: pointer;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  flex: 0.46;
+  border: 1px solid black;
+  background: white;
+  margin-left: -2.5rem;
+}
+
+.header__search > input {
+  outline: none;
+  flex-grow: 1;
+  border: none;
+  background: none;
+  height: 2rem;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__searchIcon {
+  color: #2874f0;
+  padding-right: 0.8rem;
+  cursor: pointer;
+  font-size: 25px !important;
+}
+
+.header a {
+  text-decoration: none;
+  color: #2874f0;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid white;
+  background: white;
+  padding: 0.3rem 2.3rem;
+  text-align: center;
+}
+
+.header p {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.header h4 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.navbar__cartIcon {
+  font-size: 20px !important;
+  color: white !important;
+  cursor: pointer;
+}
+
+.input__hidden {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .header__search {
+    margin-left: 0;
+  }
+  .header img {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+  }
+  .header a {
+    background: none;
+    padding: 0;
+    color: white;
+    border: none;
+  }
+  .header h4,
+  .header p {
+    display: none;
+  }
+  .header__search > input {
+    display: none;
+  }
+  .header__search {
+    border: none;
+    background: none;
+    flex: 0;
+  }
+  .navbar__searchIcon {
+    display: none !important;
+  }
+  .header img {
+    width: 30%;
+  }
+  .blend {
+    display: none;
+  }
+  .input__hidden {
+    display: initial;
+  }
+  .navbar__searchHidden {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    background: white;
+    margin-top: 1rem;
+  }
+  .navbar__searchHidden > input {
+    outline: none;
+    border: none;
+    background: none;
+    height: 2rem;
+  }
+  .navbar__hiddenSearchIcon {
+    color: grey !important;
+    font-size: 20px !important;
+  }
+}

@@ -1,0 +1,48 @@
+.deals {
+  margin-top: 3%;
+  margin-left: 2%;
+  margin-bottom: 3%;
+  width: 80%;
+}
+
+.deals__content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  row-gap: 4rem;
+  column-gap: 2.5rem;
+  margin-top: 3%;
+}
+
+.deals h1 {
+  font-family: Roboto, Arial, sans-serif;
+  color: #212121;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 1070px) {
+  .deals__content {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .deals {
+    width: auto;
+  }
+  .deals__content {
+    grid-template-columns: auto;
+  }
+  .deals h1 {
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .deals__content {
+    grid-template-columns: auto auto auto auto;
+  }
+}

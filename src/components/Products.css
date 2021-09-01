@@ -1,0 +1,28 @@
+.products {
+  background-color: white;
+  margin: 0.8rem;
+  padding-top: 1rem;
+  padding-bottom: 2%;
+}
+
+.products h1 {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 1.38rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.products__content {
+  display: flex;
+  overflow-x: scroll;
+  margin-bottom: 2.5rem;
+}
+
+.products__content::-webkit-scrollbar {
+  display: none;
+}
+
+hr {
+  color: #ebebeb;
+}
