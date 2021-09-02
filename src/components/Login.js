@@ -1,21 +1,36 @@
 import React from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
-import { useState } from 'react';
-// import {auth} from "./fire"
+import { Link, useHistory } from "react-router-dom";
+import { useState } from "react";
+import { auth } from "../fire";
 
 function Login() {
+  const history = useHistory();
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-    const signIn = (e) => {
-        e.preventDefault()
-    }
+  const signIn = (e) => {
+    e.preventDefault();
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((error) => alert(error.message));
+  };
 
-    const register = (e) => {
-        e.preventDefault()
-    }
+  const register = (e) => {
+    e.preventDefault();
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        if (auth) {
+          history.push("/");
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
 
   return (
     <div className="login">
@@ -27,16 +42,26 @@ function Login() {
           />
         </Link>
         <p>Enter Email</p>
-        <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} />
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <p>Enter Password</p>
-        <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <p className="login__terms">
           By continuing, you agree to Flipkart's Terms of Use and Privacy
           Policy.
         </p>
-        <button onClick={signIn} type="submit" >Login</button>
+        <button onClick={signIn} type="submit">
+          Login
+        </button>
         <br />
-        <button onClick={register} >Register</button>
+        <button onClick={register}>Register</button>
       </div>
     </div>
   );
