@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 import { Link, useHistory } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { auth } from "../fire";
 
 function Login() {
@@ -12,12 +12,14 @@ function Login() {
 
   const signIn = (e) => {
     e.preventDefault();
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .then((auth) => {
-        history.push("/");
-      })
-      .catch((error) => alert(error.message));
+    if (e.keyCode === 13) {
+      auth
+        .signInWithEmailAndPassword(email, password)
+        .then((auth) => {
+          history.push("/");
+        })
+        .catch((error) => alert(error.message));
+    }
   };
 
   const register = (e) => {
@@ -31,6 +33,11 @@ function Login() {
       })
       .catch((error) => alert(error.message));
   };
+
+  useEffect(() => {
+    document.addEventListener("keyup", signIn);
+    return () => document.removeEventListener("keyup", signIn);
+  });
 
   return (
     <div className="login">

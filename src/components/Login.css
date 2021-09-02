@@ -28,8 +28,8 @@
 .login__content p {
   font-size: 0.9rem;
   color: grey;
-  margin-bottom: .5rem;
-  margin-top: .5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .login__content input {
@@ -44,10 +44,14 @@
 
 .login__content button {
   height: 2.5rem;
-  background-color: #fb641b;
+  background-color: #ff9f00;
   color: white;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
   border: none;
+}
+
+.login__content button:active {
+  background-color: #fb641b;
 }

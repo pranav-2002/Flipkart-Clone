@@ -82,6 +82,23 @@
   display: none;
 }
 
+.header__logout {
+  outline: none;
+  cursor: pointer;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  border: 1px solid white;
+  background: white;
+  padding: 0.3rem 2.2rem;
+  color: #2874f0;
+  font-weight: 600;
+}
+
+.header__logout:active {
+  background-color: whitesmoke;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 @media screen and (max-width: 800px) {
   .header__search {
     margin-left: 0;
@@ -143,5 +160,11 @@
   .navbar__hiddenSearchIcon {
     color: grey !important;
     font-size: 20px !important;
+  }
+  .header__logout {
+    background: none;
+    padding: 0;
+    color: white;
+    border: none;
   }
 }
