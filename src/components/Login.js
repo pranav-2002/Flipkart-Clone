@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 import { Link, useHistory } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { auth } from "../fire";
 
 function Login() {
@@ -12,14 +12,12 @@ function Login() {
 
   const signIn = (e) => {
     e.preventDefault();
-    if (e.keyCode === 13) {
-      auth
-        .signInWithEmailAndPassword(email, password)
-        .then((auth) => {
-          history.push("/");
-        })
-        .catch((error) => alert(error.message));
-    }
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((error) => alert(error.message));
   };
 
   const register = (e) => {
@@ -33,11 +31,6 @@ function Login() {
       })
       .catch((error) => alert(error.message));
   };
-
-  useEffect(() => {
-    document.addEventListener("keyup", signIn);
-    return () => document.removeEventListener("keyup", signIn);
-  });
 
   return (
     <div className="login">
@@ -61,8 +54,7 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <p className="login__terms">
-          By continuing, you agree to Flipkart's Terms of Use and Privacy
-          Policy.
+          By continuing, you agree to Fake Terms of Use and Privacy Policy.
         </p>
         <button onClick={signIn} type="submit">
           Login
